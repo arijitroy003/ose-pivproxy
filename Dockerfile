@@ -1,8 +1,7 @@
 # built from centos
 FROM centos:7
-MAINTAINER Chris Ruffalo <cruffalo@redhat.com>
-
-LABEL io.k8s.description="HTTPD Proxy configured to support PIV authentication with OCP" \
+LABEL maintainer="Chris Ruffalo <cruffalo@redhat.com>" \
+  io.k8s.description="HTTPD Proxy configured to support PIV authentication with OCP" \
   io.k8s.display-name="HTTPD PIV Proxy" \
   io.openshift.expose-services="8080:tcp,8443:tcp" \
   io.openshift.tags="x509,certificates,proxy,PIV,CAC" \
@@ -46,4 +45,4 @@ RUN chmod +x /tmp/shared-setup.sh && \
 WORKDIR /apache
 
 # start httpd as the entry point
-ENTRYPOINT /apache/start.sh
+ENTRYPOINT ["/apache/start.sh"]
