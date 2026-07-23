@@ -21,7 +21,7 @@ This was created from the documentation provided by OpenShift for versions [3.4]
 ## Publicly Available PKI Materials
 The reason that links to government infrastructure are provided here is because these pages can be difficult to find. It is important to use _correct_ and _properly trusted_ certificate material to ensure the security and integrity of any authentication performed to OpenShift with this method.
 * [Health and Human Services PKI Downloads](https://ocio.nih.gov/Smartcard/Pages/PKI_chain.aspx)
-* [Department of Defense PKI Downloads](https://iase.disa.mil/pki-pke/Pages/tools.aspx)
+* [Department of Defense PKI Downloads](https://public.cyber.mil/pki-pke/tools-configuration-files/)
 * [Department of Treasury PKI Downloads](http://pki.treas.gov/crl_certs.htm)
 
 ## Variables
