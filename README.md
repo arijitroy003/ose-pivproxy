@@ -90,7 +90,7 @@ Then copy the files from the `/etc/origin/master/proxy` directory to each other 
 ```
 _Note: this is not strictly necessary but keeps the files available in case they need to be reused or client material needs to be regenerated._
 
-Then copy the `piv_proxy.pem` to the node that the following commands will be executed from. These commands can be performed anywhere there is an `oc` client installed or they can be performed right on the master. The `master-ca.crt` is the certificate on the master (in `/etc/origin/master`) that provides service for the master console. This is ususally `master.server.crt` but you can check each cert with `openssl x509 -in <cert> -noout -text` and examine the `X509v3 Subject Alternative Name` section for presence of the DNS names that are used for the master console.
+Then copy the `piv_proxy.pem` to the node that the following commands will be executed from. These commands can be performed anywhere there is an `oc` client installed or they can be performed right on the master. The `master-ca.crt` is the certificate on the master (in `/etc/origin/master`) that provides service for the master console. This is usually `master.server.crt` but you can check each cert with `openssl x509 -in <cert> -noout -text` and examine the `X509v3 Subject Alternative Name` section for presence of the DNS names that are used for the master console.
 
 ```bash
 []$ scp master1:/etc/origin/master/proxy/piv_proxy.pem /local/path/to/piv_proxy.pem
