@@ -29,4 +29,4 @@ echo "Using configuration file from: ${CONF_SOURCE}"
 cp ${CONF_SOURCE} ${CONF_TARGET}
 
 # start apache in the foreground
-/usr/sbin/httpd -DFOREGROUND
+exec /usr/sbin/httpd -DFOREGROUND
