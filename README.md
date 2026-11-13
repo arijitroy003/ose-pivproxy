@@ -21,7 +21,7 @@ This was created from the documentation provided by OpenShift for versions [3.4]
 ## Publicly Available PKI Materials
 The reason that links to government infrastructure are provided here is because these pages can be difficult to find. It is important to use _correct_ and _properly trusted_ certificate material to ensure the security and integrity of any authentication performed to OpenShift with this method.
 * [Health and Human Services PKI Downloads](https://ocio.nih.gov/Smartcard/Pages/PKI_chain.aspx)
-* [Department of Defense PKI Downloads](https://public.cyber.mil/pki-pke/tools-configuration-files/)
+* [Department of Defense PKI Downloads](https://iase.disa.mil/pki-pke/Pages/tools.aspx)
 * [Department of Treasury PKI Downloads](http://pki.treas.gov/crl_certs.htm)
 
 ## Variables
@@ -90,7 +90,7 @@ Then copy the files from the `/etc/origin/master/proxy` directory to each other 
 ```
 _Note: this is not strictly necessary but keeps the files available in case they need to be reused or client material needs to be regenerated._
 
-Then copy the `piv_proxy.pem` to the node that the following commands will be executed from. These commands can be performed anywhere there is an `oc` client installed or they can be performed right on the master. The `master-ca.crt` is the certificate on the master (in `/etc/origin/master`) that provides service for the master console. This is usually `master.server.crt` but you can check each cert with `openssl x509 -in <cert> -noout -text` and examine the `X509v3 Subject Alternative Name` section for presence of the DNS names that are used for the master console.
+Then copy the `piv_proxy.pem` to the node that the following commands will be executed from. These commands can be performed anywhere there is an `oc` client installed or they can be performed right on the master. The `master-ca.crt` is the certificate on the master (in `/etc/origin/master`) that provides service for the master console. This is ususally `master.server.crt` but you can check each cert with `openssl x509 -in <cert> -noout -text` and examine the `X509v3 Subject Alternative Name` section for presence of the DNS names that are used for the master console.
 
 ```bash
 []$ scp master1:/etc/origin/master/proxy/piv_proxy.pem /local/path/to/piv_proxy.pem
